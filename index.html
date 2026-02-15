@@ -11,29 +11,16 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
 
 <style>
-body {
-    margin:0;
-    font-family:Segoe UI, Arial;
-}
-#map {
-    height:100vh;
-}
+body { margin:0; font-family:Segoe UI, Arial; }
+#map { height:100vh; }
 .header {
-    position:absolute;
-    top:15px;
-    left:60px;
-    z-index:1000;
-    background:white;
-    padding:12px 18px;
-    border-radius:12px;
+    position:absolute; top:15px; left:60px; z-index:1000;
+    background:white; padding:12px 18px; border-radius:12px;
     box-shadow:0 4px 12px rgba(0,0,0,0.3);
-    font-size:20px;
-    font-weight:bold;
+    font-size:20px; font-weight:bold;
 }
 .legend {
-    background:white;
-    padding:10px;
-    border-radius:10px;
+    background:white; padding:10px; border-radius:10px;
     box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 </style>
@@ -43,8 +30,11 @@ body {
 <div class="header">Académie de Nice — Aires éducatives</div>
 <div id="map"></div>
 
+<!-- Leaflet + MarkerCluster -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<!-- Proj4js pour conversion Lambert -> WGS84 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.js"></script>
 
 <script>
 // =======================
@@ -52,20 +42,13 @@ body {
 // =======================
 var map = L.map('map').setView([43.8, 6.3], 8);
 
-var relief = L.tileLayer(
-    'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-    { attribution: '© OpenTopoMap' }
-).addTo(map);
+var relief = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+    { attribution: '© OpenTopoMap' }).addTo(map);
 
-var satellite = L.tileLayer(
-    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    { attribution: '© Esri' }
-);
+var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    { attribution: '© Esri' });
 
-L.control.layers({
-    "Relief": relief,
-    "Satellite": satellite
-}).addTo(map);
+L.control.layers({ "Relief": relief, "Satellite": satellite }).addTo(map);
 
 // =======================
 // CLUSTERS
@@ -74,12 +57,17 @@ var ameCluster = L.markerClusterGroup();
 var ateCluster = L.markerClusterGroup();
 
 // =======================
+// PROJ4 : Lambert II étendu -> WGS84
+// =======================
+var lambert2154 = '+proj=lcc +lat_1=49.5 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs';
+var wgs84 = '+proj=longlat +datum=WGS84 +no_defs';
+
+// =======================
 // LECTURE CSV
 // =======================
 fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
 .then(response => response.text())
 .then(function(text){
-
     var lignes = text.split("\n");
     console.log("Nombre de lignes CSV:", lignes.length);
 
@@ -87,10 +75,7 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
         if(!lignes[i]) continue;
 
         var cols = lignes[i].split(";");
-        if(cols.length < 9) {
-            console.warn("Ligne ignorée, colonnes insuffisantes:", lignes[i]);
-            continue;
-        }
+        if(cols.length < 9) continue;
 
         var nom = cols[0];
         var adresse = cols[1];
@@ -99,19 +84,18 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
         var ame = cols[4];
         var ate = cols[5];
         var site = cols[6];
-        var lon = parseFloat(cols[7].replace(",", "."));
-        var lat = parseFloat(cols[8].replace(",", "."));
+        var lonLambert = parseFloat(cols[7].replace(",", "."));
+        var latLambert = parseFloat(cols[8].replace(",", "."));
 
-        if(isNaN(lat) || isNaN(lon)) {
-            console.warn("Coordonnées invalides:", lat, lon, lignes[i]);
-            continue;
-        }
+        if(isNaN(latLambert) || isNaN(lonLambert)) continue;
 
-        var popup =
-            "<b>"+nom+"</b><br>"+
-            adresse+"<br>"+
-            cp+" "+commune+"<br>"+
-            (site ? "<a href='"+site+"' target='_blank'>Site web</a>" : "");
+        // Conversion Lambert -> WGS84
+        var coords = proj4(lambert2154, wgs84, [lonLambert, latLambert]);
+        var lon = coords[0];
+        var lat = coords[1];
+
+        var popup = "<b>"+nom+"</b><br>"+adresse+"<br>"+cp+" "+commune+"<br>"+
+                    (site ? "<a href='"+site+"' target='_blank'>Site web</a>" : "");
 
         if(ame === "1"){
             var marker = L.circleMarker([lat, lon], {
@@ -119,7 +103,6 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
             });
             marker.bindPopup(popup);
             ameCluster.addLayer(marker);
-            console.log("Marker AME ajouté:", nom);
         }
 
         if(ate === "1"){
@@ -128,7 +111,6 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
             });
             marker.bindPopup(popup);
             ateCluster.addLayer(marker);
-            console.log("Marker ATE ajouté:", nom);
         }
     }
 
@@ -142,10 +124,9 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
 var legend = L.control({position:"bottomright"});
 legend.onAdd = function(){
     var div = L.DomUtil.create("div","legend");
-    div.innerHTML =
-        "<b>Légende</b><br>"+
-        "<span style='color:#007bff;'>●</span> AME<br>"+
-        "<span style='color:#28a745;'>●</span> ATE";
+    div.innerHTML = "<b>Légende</b><br>"+
+                    "<span style='color:#007bff;'>●</span> AME<br>"+
+                    "<span style='color:#28a745;'>●</span> ATE";
     return div;
 };
 legend.addTo(map);
