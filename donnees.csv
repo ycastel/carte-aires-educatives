@@ -1,70 +1,70 @@
-﻿Nom_ecole;Adresse;CP;Commune;AME2024;ATE2024;site_web;lon;lat
-Ecole Eugène Vial;11 avenue Saint-Louis;06150;Cannes;1;0;http://cpieazur.fr/;1024386,7784999982;6281301,2086
-Collège Port-Lympia;31  bouvelard Stalingrad;06300;Nice;1;0;https://www.mermontagne.org/;1045505,1766000018;6298064,608100001
-Ecole Marcel Pagnol;136 avenue Maurice Chevalier;06150;Cannes;1;1;http://cpieazur.fr/;1020006,5126999989;6282089,3682
-Ecole Paul Langevin;237 rue Joliot Curie Ste Marguerite;83130;La Garde;1;1;https://www.chercheursenherbe.com/;943471,9196999967;6228165,889800001
-EEPU Charles Sandro;rue Pellegrin;83220;Le Pradet;1;1;https://naturoscope.fr/;946585,261500001;6227524,4717000015
-Collège Villeneuve;rue de la Tourrache;83600;Fréjus;1;0;https://esterelcotedazur-agglo.fr/;1002021,2234999985;6265937,892299999
-Collège Louis Clément;4 rue Marc Baron;83430;Saint Mandrier-sur-Mer;1;0;https://www.ville-saintmandrier.fr/;938580,9896000028;6223974,7392
-Ecole primaire La Croix Valmer;rue Frédéric Mistral;83420;La Croix Valmer;1;0;;989819,996299997;6241169,390999999
-Ecole Elémentaire Ernest Camail;rue Anatole France;83530;Saint-Raphaël;1;0;https://esterelcotedazur-agglo.fr/;1008787,6336999983;6266262,2487
-Ecole André Malraux;6 avenue Winston Churchill;06320;Cap d'Ail;1;0;https://www.mermontagne.org/;1055036,2503999993;6301396,335700002
-Collège Jean Médecin de Sospel;40 route de l'Agaisen;06380;Sospel;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1057413,0561999977;6319030,917800002
-Collège les Bréguières;1, Avenue Saint-Exupéry;06800;Cagnes sur Mer;1;0;https://www.clubmoana.fr/;1035424,7061000019;6293556,4584
-Ecole primaire Joseph Ducret;Route de Brignoles;83136;Méounes-les-Montrieux;0;1;https://www.spece.fr/;941118,4394999966;6247016,584800001
-Collège Guy de Maupassant;Avenue du Docteur Francis Bosio;83136;Garéoult;0;1;https://museum.var.fr/ws/home/app/collection/expo;946821,8840000033;6251878,719900001
-Ecole Saint-Barthélémy;25 Avenue saint Barthélémy;06200;Nice;1;0;https://www.mermontagne.org/;1042851,112999998;6300267,201400001
-Ecole Blaise Pascal;Place Jean Emeric;83136;Néoules;0;1;https://www.spece.fr/;944547,0694999993;6250327,698600002
-Ecole primaire Jean Jaurès;Rue Jean Jaurès;83340;Le Luc;0;1;https://www.spece.fr/;968793,6525999978;6260625,925500002
-Ecole élémentaire Moulin;200 Rue René Cassin;06540;Breil-sur-Roya;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1062246,6709999964;6326044,9967
-Ecole primaire de Théoule sur Mer;14 rue Léon Montier;06590;Théoule-sur-Mer;1;0;https://naturdive.com/;1018558,1005999967;6275474,774900001
-Collège Les Mimosas;1216 avenue Général Garbay;06210;Mandelieu-la-Napoule;1;0;https://www.mermontagne.org/;1018278,7383000031;6281998,5205999985
-Collège Henri Matisse;2 avenue Seilern;06000;Nice;0;1;https://univ-cotedazur.fr/;1044158,8662;6300882,327500001
-Ecole élémentaire Ariane Pagnol;5 avenue Général Olry;06300;Nice;1;0;https://naturdive.com/;1046279,0650999993;6302731,741700001
-Institution Saint-Joseph Carnolès;191 avenue Aristide Briand;06190;Roquebrune-Cap-Martin;1;0;https://www.ade-mediterranee.org/page/2043940-accueil;1060846,8747999966;6306462,9461
-Collège Henri Nans;Allée Jean Moulin;83630;Aups;0;1;https://parcduverdon.fr/fr/education-au-territoire/nos-projets;960445,045599997;6286530,048099998
-Collège Pierre de Coubertin;Avenue Pierre de Coubertin BP 95;83340;Le Luc;0;1;https://www.spece.fr/;968863,1617999971;6260319,558400001
-Collège Joseph d'Arbaud;Route de Tavernes;83670;Barjols;0;1;https://www.maisonregionaledeleau.org/;943106,113499999;6278418,076699998
-Collège Moulin Blanc;Route des Salins;83990;Saint-Tropez;1;0;https://www.golfe-sainttropez.fr/;998522,6772999987;6247301,653900001
-Ecole primaire Jean Moulin;Avenue Jean Moulin;83870;Signes;0;1;https://www.spece.fr/;932552,6406999975;6247679,7181
-Ecole primaire Jean Aicard;333 rue du Nouveau Pigeonnier;83130;La Garde;0;1;https://www.chercheursenherbe.com/;945487,0197999999;6229757,310699999
-Ecole primaire Docteur Varenne;Place du Général de Gaulle;83610;Collobrières;0;1;https://www.spece.fr/;968986,6463000029;6243079,987399999
-Ecole primaire Balzac-Flaubert;Boulevard Strauss SAINT-AYGULF;83370;Fréjus;1;0;https://esterelcotedazur-agglo.fr/;1001011,7261999995;6259555,389800001
-Ecole primaire Jean Janin;Rue Jean Aicard;83520;Roquebrune-sur-Argens;1;0;https://esterelcotedazur-agglo.fr/;994709,0970000029;6267319,770100001
-Ecole élémentaire Fragonard;Impasse du Général de Gaulle;06530;Peymeinade;0;1;https://www.mediterranee2000.org/;1012696,0231999978;6290174,6611
-Ecole primaire Fulconis;Rue Raiberti;06450;Saint-Martin-Vésubie;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1040412,8849000037;6339791,7027
-Ecole primaire Paul Roux;112 chemin de Malbousquet QUARTIER DE CAïS;83600;Fréjus;1;0;https://esterelcotedazur-agglo.fr/;1001635,3291999996;6269240,8255
-Ecole primaire La Roseraie;63 impasse Mademoiselle Leca;83240;Cavalaire-sur-Mer;1;0;https://www.golfe-sainttropez.fr/;986715,5537;6237045,4967
-Ecole primaire Maurin Des Maures;Saint-Jean;83340;Les Mayons;0;1;https://www.spece.fr/;972382,3836999983;6252199,1754
-Collège Bellevue;3 Bretelle du Centre;06240;Beausoleil;1;0;https://www.mermontagne.org/;1055850,7941000015;6303477,414799999
-Ecole élémentaire Daluis;VILLAGE;06470;Daluis;0;1;https://paca.lpo.fr/;1005284,4518000036;6332318,552999999
-Ecole primaire privée Notre-Dame du Sacré-Coeur;Villa Blanche, 3 rue Pasteur;06500;Menton;1;0;https://www.ade-mediterranee.org/page/2043940-accueil;1062130,0207000002;6307490,249499999
-Ecole élémentaire Papon;6 rue Papon;06300;Nice;1;0;https://www.remed-zero-plastique.org/structures/bleu-gorgone-nice;1045020,2819000036;6298540,4439
-Ecole élémentaire Caucade;126 avenue Sainte-Marguerite;06200;Nice;1;0;https://www.mermontagne.org/;1039535,3796000034;6295621,872099999
-Ecole primaire La Bouverie;Place Titeuf LA BOUVERIE;83520;Roquebrune-sur-Argens;0;1;https://www.marjorieautresregards.com/;994809,9261000007;6273362,605799999
-Ecole primaire la Deidiere;Chemin du Sauvet;83270;Saint-Cyr-sur-Mer;1;0;https://www.chercheursenherbe.com/;920816,2730000019;6235445,174199998
-Ecole primaire Paul Barles;Route de Mazaugues;83470;Saint-Maximin-la-Sainte-Baume;0;1;https://www.cauevar.fr/;931588,0243000016;6264826,9133
-Ecole primaire de Tende;3 place du Général de Gaulle;06430;Tende;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1067749,7942000031;6342856,2159
-Ecole primaire Brunet 2;Place Jean Fiegenschuch;83100;Toulon;0;1;https://www.chercheursenherbe.com/;941213,5474999994;6229929,795899998
-Ecole primaire du Coulet;Quartier Collet de Christine;83440;Tourrettes;0;1;https://www.planete-sciences.org/;999106,2568000033;6286828,554299999
-Ecole primaire Villecroze;Place Général de Gaulle;83690;Villecroze;0;1;;964593,6050999984;6281528,623100001
-Ecole élémentaire Campagno;Quartier de l'Istre VAL DE TIGNET;06530;Le Tignet;0;1;https://paca.lpo.fr/;1010115,0289999992;6288759,634100001
-Collège Guillaume Vento;400 cours du Centenaire BP 111;06503;Menton;1;0;https://www.riviera-francaise.fr/;1061723,8401999995;6307391,903000001
-Ecole primaire Les Salins d'Hyères;Rue Saint-Nicolas;83400;Hyères;1;0;;960515,2815999985;6229442,468199998
-Ecole primaire Les Iles d'Or  ;2 avenue Godillot;83400;Hyères;0;1;;954119,7776999995;6229456,571899999
-Ecole primaire Pont-Neuf;89 rue Eugene Manuel;83200;Toulon;0;1;https://www.chercheursenherbe.com/;936115,6462000012;6229798,459399998
-Ecole primaire Aristide Briand;Avenue Garessio;83670;Barjols;0;1;;942931,7686000019;6278529,774900001
-Ecole primaire Les Moulins;15 route de Castagniers;06670;Castagniers;0;1;https://ecole.ac-nice.fr/carros/castagniersmoulins/;1039180,6123000011;6308055,241099998
-Ecole primaire Chateaudouble;Place Vieille;83300;Châteaudouble;0;1;;978633,3800999969;6283638,400199998
-Collège les Chênes;Avenue du 15e Corps;83600;Fréjus;0;1;http://www.ac-nice.fr/college-chenes/;1002866,8738999963;6266917,712400001
-Ecole primaire Marcel Pagnol;Rue Marie Mauron LES GRAVETTES;83220;Le Pradet;1;0;;945560,2278999984;6228024,530099999
-Ecole primaire Ronchèse;Rue Lamartine;06000;Nice;1;0;;1043925,3149999976;6298712,0482
-Ecole primaire privée Saint Joseph;14 rue Barla;06300;Nice;1;0;;1045138,2608999982;6298558,089000002
-Lycée Jean Aicard;4 avenue Gallieni BP 706;83412;Hyères;1;0;https://www.lyc-jean-aicard.ac-nice.fr/;954514,2845999971;6229405,1466999985
-Ecole maternelle La Planquette;98 avenue Auguste Renoir;83130;La Garde;0;1;;945934,4673999995;6230649,564199999
-Collège Marie Curie;Rue Pierre Curie;83500;La Seyne-sur-Mer;1;0;http://www.collegemariecurie.net;933955,6903000027;6226823,014199998
-Lycée du Val d'Argens;Avenue de Vaugrenier BP 86;83490;Le Muy;0;1;https://www.lyc-val-d-argens.ac-nice.fr/;987001,6753000021;6270131,6017
-Collège Ségurane;3 rue Sincaire;06300;Nice;1;0;http://www.ac-nice.fr/segurane;1044955,2841000035;6298306,941100001
-Ecole primaire Louis Clément;Impasse des Ecoles;83430;Saint-Mandrier-sur-Mer;1;0;;938520,5262999982;6223997,2905
-Ecole primaire Les Moulins;1335 chemin des Fours à Chaux;83200;Toulon;0;1;;937180,1336999983;6232394,743799999
-Ecole élémentaire Ile Verte;2555 route de Biot;06560;Valbonne;0;1;;1026760,8158000037;6291118,136100002
+Nom_ecole;Adresse;CP;Commune;AME2024;ATE2024;site_web;lon;lat
+Ecole Eugène Vial;11 avenue Saint-Louis;6150;Cannes;1;0;http://cpieazur.fr/;1024386.7785000000;6281301.2086
+Collège Port-Lympia;31  bouvelard Stalingrad;6300;Nice;1;0;https://www.mermontagne.org/;1045505.1766000000;6298064.608100000
+Ecole Marcel Pagnol;136 avenue Maurice Chevalier;6150;Cannes;1;1;http://cpieazur.fr/;1020006.5127000000;6282089.3682
+Ecole Paul Langevin;237 rue Joliot Curie Ste Marguerite;83130;La Garde;1;1;https://www.chercheursenherbe.com/;943471.9196999970;6228165.889800000
+EEPU Charles Sandro;rue Pellegrin;83220;Le Pradet;1;1;https://naturoscope.fr/;946585.261500001;6227524.4717000000
+Collège Villeneuve;rue de la Tourrache;83600;Fréjus;1;0;https://esterelcotedazur-agglo.fr/;1002021.2235000000;6265937.892300000
+Collège Louis Clément;4 rue Marc Baron;83430;Saint Mandrier-sur-Mer;1;0;https://www.ville-saintmandrier.fr/;938580.9896000030;6223974.7392
+Ecole primaire La Croix Valmer;rue Frédéric Mistral;83420;La Croix Valmer;1;0;;989819.996299997;6241169.391000000
+Ecole Elémentaire Ernest Camail;rue Anatole France;83530;Saint-Raphaël;1;0;https://esterelcotedazur-agglo.fr/;1008787.6337000000;6266262.2487
+Ecole André Malraux;6 avenue Winston Churchill;6320;Cap d'Ail;1;0;https://www.mermontagne.org/;1055036.2504000000;6301396.335700000
+Collège Jean Médecin de Sospel;40 route de l'Agaisen;6380;Sospel;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1057413.0562000000;6319030.917800000
+Collège les Bréguières;1. Avenue Saint-Exupéry;6800;Cagnes sur Mer;1;0;https://www.clubmoana.fr/;1035424.7061000000;6293556.4584
+Ecole primaire Joseph Ducret;Route de Brignoles;83136;Méounes-les-Montrieux;0;1;https://www.spece.fr/;941118.4394999970;6247016.584800000
+Collège Guy de Maupassant;Avenue du Docteur Francis Bosio;83136;Garéoult;0;1;https://museum.var.fr/ws/home/app/collection/expo;946821.8840000030;6251878.719900000
+Ecole Saint-Barthélémy;25 Avenue saint Barthélémy;6200;Nice;1;0;https://www.mermontagne.org/;1042851.113000000;6300267.201400000
+Ecole Blaise Pascal;Place Jean Emeric;83136;Néoules;0;1;https://www.spece.fr/;944547.0694999990;6250327.698600000
+Ecole primaire Jean Jaurès;Rue Jean Jaurès;83340;Le Luc;0;1;https://www.spece.fr/;968793.6525999980;6260625.925500000
+Ecole élémentaire Moulin;200 Rue René Cassin;6540;Breil-sur-Roya;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1062246.6710000000;6326044.9967
+Ecole primaire de Théoule sur Mer;14 rue Léon Montier;6590;Théoule-sur-Mer;1;0;https://naturdive.com/;1018558.1006000000;6275474.774900000
+Collège Les Mimosas;1216 avenue Général Garbay;6210;Mandelieu-la-Napoule;1;0;https://www.mermontagne.org/;1018278.7383000000;6281998.5206000000
+Collège Henri Matisse;2 avenue Seilern;6000;Nice;0;1;https://univ-cotedazur.fr/;1044158.8662;6300882.327500000
+Ecole élémentaire Ariane Pagnol;5 avenue Général Olry;6300;Nice;1;0;https://naturdive.com/;1046279.0651000000;6302731.741700000
+Institution Saint-Joseph Carnolès;191 avenue Aristide Briand;6190;Roquebrune-Cap-Martin;1;0;https://www.ade-mediterranee.org/page/2043940-accueil;1060846.8748000000;6306462.9461
+Collège Henri Nans;Allée Jean Moulin;83630;Aups;0;1;https://parcduverdon.fr/fr/education-au-territoire/nos-projets;960445.045599997;6286530.048100000
+Collège Pierre de Coubertin;Avenue Pierre de Coubertin BP 95;83340;Le Luc;0;1;https://www.spece.fr/;968863.1617999970;6260319.558400000
+Collège Joseph d'Arbaud;Route de Tavernes;83670;Barjols;0;1;https://www.maisonregionaledeleau.org/;943106.113499999;6278418.076700000
+Collège Moulin Blanc;Route des Salins;83990;Saint-Tropez;1;0;https://www.golfe-sainttropez.fr/;998522.6772999990;6247301.653900000
+Ecole primaire Jean Moulin;Avenue Jean Moulin;83870;Signes;0;1;https://www.spece.fr/;932552.6406999980;6247679.7181
+Ecole primaire Jean Aicard;333 rue du Nouveau Pigeonnier;83130;La Garde;0;1;https://www.chercheursenherbe.com/;945487.0198000000;6229757.310700000
+Ecole primaire Docteur Varenne;Place du Général de Gaulle;83610;Collobrières;0;1;https://www.spece.fr/;968986.6463000030;6243079.987400000
+Ecole primaire Balzac-Flaubert;Boulevard Strauss SAINT-AYGULF;83370;Fréjus;1;0;https://esterelcotedazur-agglo.fr/;1001011.7262000000;6259555.389800000
+Ecole primaire Jean Janin;Rue Jean Aicard;83520;Roquebrune-sur-Argens;1;0;https://esterelcotedazur-agglo.fr/;994709.0970000030;6267319.770100000
+Ecole élémentaire Fragonard;Impasse du Général de Gaulle;6530;Peymeinade;0;1;https://www.mediterranee2000.org/;1012696.0232000000;6290174.6611
+Ecole primaire Fulconis;Rue Raiberti;6450;Saint-Martin-Vésubie;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1040412.8849000000;6339791.7027
+Ecole primaire Paul Roux;112 chemin de Malbousquet QUARTIER DE CAïS;83600;Fréjus;1;0;https://esterelcotedazur-agglo.fr/;1001635.3292000000;6269240.8255
+Ecole primaire La Roseraie;63 impasse Mademoiselle Leca;83240;Cavalaire-sur-Mer;1;0;https://www.golfe-sainttropez.fr/;986715.5537;6237045.4967
+Ecole primaire Maurin Des Maures;Saint-Jean;83340;Les Mayons;0;1;https://www.spece.fr/;972382.3836999980;6252199.1754
+Collège Bellevue;3 Bretelle du Centre;6240;Beausoleil;1;0;https://www.mermontagne.org/;1055850.7941000000;6303477.414800000
+Ecole élémentaire Daluis;VILLAGE;6470;Daluis;0;1;https://paca.lpo.fr/;1005284.4518000000;6332318.553000000
+Ecole primaire privée Notre-Dame du Sacré-Coeur;Villa Blanche. 3 rue Pasteur;6500;Menton;1;0;https://www.ade-mediterranee.org/page/2043940-accueil;1062130.0207000000;6307490.249500000
+Ecole élémentaire Papon;6 rue Papon;6300;Nice;1;0;https://www.remed-zero-plastique.org/structures/bleu-gorgone-nice;1045020.2819000000;6298540.4439
+Ecole élémentaire Caucade;126 avenue Sainte-Marguerite;6200;Nice;1;0;https://www.mermontagne.org/;1039535.3796000000;6295621.872100000
+Ecole primaire La Bouverie;Place Titeuf LA BOUVERIE;83520;Roquebrune-sur-Argens;0;1;https://www.marjorieautresregards.com/;994809.9261000010;6273362.605800000
+Ecole primaire la Deidiere;Chemin du Sauvet;83270;Saint-Cyr-sur-Mer;1;0;https://www.chercheursenherbe.com/;920816.2730000020;6235445.174200000
+Ecole primaire Paul Barles;Route de Mazaugues;83470;Saint-Maximin-la-Sainte-Baume;0;1;https://www.cauevar.fr/;931588.0243000020;6264826.9133
+Ecole primaire de Tende;3 place du Général de Gaulle;6430;Tende;0;1;https://www.mercantour-parcnational.fr/fr/des-actions/sensibiliser-eduquer-et-accueillir/leducation-lenvironnement-et-au-developpement-8;1067749.7942000000;6342856.2159
+Ecole primaire Brunet 2;Place Jean Fiegenschuch;83100;Toulon;0;1;https://www.chercheursenherbe.com/;941213.5474999990;6229929.795900000
+Ecole primaire du Coulet;Quartier Collet de Christine;83440;Tourrettes;0;1;https://www.planete-sciences.org/;999106.2568000030;6286828.554300000
+Ecole primaire Villecroze;Place Général de Gaulle;83690;Villecroze;0;1;;964593.6050999980;6281528.623100000
+Ecole élémentaire Campagno;Quartier de l'Istre VAL DE TIGNET;6530;Le Tignet;0;1;https://paca.lpo.fr/;1010115.0290000000;6288759.634100000
+Collège Guillaume Vento;400 cours du Centenaire BP 111;6503;Menton;1;0;https://www.riviera-francaise.fr/;1061723.8402000000;6307391.903000000
+Ecole primaire Les Salins d'Hyères;Rue Saint-Nicolas;83400;Hyères;1;0;;960515.2815999990;6229442.468200000
+Ecole primaire Les Iles d'Or  ;2 avenue Godillot;83400;Hyères;0;1;;954119.7777000000;6229456.571900000
+Ecole primaire Pont-Neuf;89 rue Eugene Manuel;83200;Toulon;0;1;https://www.chercheursenherbe.com/;936115.6462000010;6229798.459400000
+Ecole primaire Aristide Briand;Avenue Garessio;83670;Barjols;0;1;;942931.7686000020;6278529.774900000
+Ecole primaire Les Moulins;15 route de Castagniers;6670;Castagniers;0;1;https://ecole.ac-nice.fr/carros/castagniersmoulins/;1039180.6123000000;6308055.241100000
+Ecole primaire Chateaudouble;Place Vieille;83300;Châteaudouble;0;1;;978633.3800999970;6283638.400200000
+Collège les Chênes;Avenue du 15e Corps;83600;Fréjus;0;1;http://www.ac-nice.fr/college-chenes/;1002866.8739000000;6266917.712400000
+Ecole primaire Marcel Pagnol;Rue Marie Mauron LES GRAVETTES;83220;Le Pradet;1;0;;945560.2278999980;6228024.530100000
+Ecole primaire Ronchèse;Rue Lamartine;6000;Nice;1;0;;1043925.3150000000;6298712.0482
+Ecole primaire privée Saint Joseph;14 rue Barla;6300;Nice;1;0;;1045138.2609000000;6298558.089000000
+Lycée Jean Aicard;4 avenue Gallieni BP 706;83412;Hyères;1;0;https://www.lyc-jean-aicard.ac-nice.fr/;954514.2845999970;6229405.1467000000
+Ecole maternelle La Planquette;98 avenue Auguste Renoir;83130;La Garde;0;1;;945934.4674000000;6230649.564200000
+Collège Marie Curie;Rue Pierre Curie;83500;La Seyne-sur-Mer;1;0;http://www.collegemariecurie.net;933955.6903000030;6226823.014200000
+Lycée du Val d'Argens;Avenue de Vaugrenier BP 86;83490;Le Muy;0;1;https://www.lyc-val-d-argens.ac-nice.fr/;987001.6753000020;6270131.6017
+Collège Ségurane;3 rue Sincaire;6300;Nice;1;0;http://www.ac-nice.fr/segurane;1044955.2841000000;6298306.941100000
+Ecole primaire Louis Clément;Impasse des Ecoles;83430;Saint-Mandrier-sur-Mer;1;0;;938520.5262999980;6223997.2905
+Ecole primaire Les Moulins;1335 chemin des Fours à Chaux;83200;Toulon;0;1;;937180.1336999980;6232394.743800000
+Ecole élémentaire Ile Verte;2555 route de Biot;6560;Valbonne;0;1;;1026760.8158000000;6291118.136100000
