@@ -19,6 +19,12 @@ body { margin:0; font-family:Segoe UI, Arial; }
     box-shadow:0 4px 12px rgba(0,0,0,0.3);
     font-size:20px; font-weight:bold;
 }
+.filter {
+    position:absolute; top:80px; left:60px; z-index:1000;
+    background:white; padding:10px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
 .legend {
     background:white; padding:10px; border-radius:10px;
     box-shadow:0 4px 12px rgba(0,0,0,0.3);
@@ -28,6 +34,13 @@ body { margin:0; font-family:Segoe UI, Arial; }
 
 <body>
 <div class="header">Académie de Nice — Aires éducatives</div>
+
+<!-- Filtres -->
+<div class="filter">
+    <label><input type="checkbox" id="ameCheckbox" checked> AME</label><br>
+    <label><input type="checkbox" id="ateCheckbox" checked> ATE</label>
+</div>
+
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -39,16 +52,16 @@ body { margin:0; font-family:Segoe UI, Arial; }
 // =======================
 var map = L.map('map').setView([43.8, 6.3], 8);
 
-// Couches Relief et Satellite
+// Relief et Satellite
 var relief = L.tileLayer(
     'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
     { attribution: '© OpenTopoMap' }
-).addTo(map);
+);
 
 var satellite = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     { attribution: '© Esri' }
-);
+).addTo(map); // <-- Satellite par défaut
 
 L.control.layers({
     "Relief": relief,
@@ -112,6 +125,19 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
 
     map.addLayer(ameCluster);
     map.addLayer(ateCluster);
+});
+
+// =======================
+// FILTRES INTERACTIFS
+// =======================
+document.getElementById("ameCheckbox").addEventListener("change", function(){
+    if(this.checked) map.addLayer(ameCluster);
+    else map.removeLayer(ameCluster);
+});
+
+document.getElementById("ateCheckbox").addEventListener("change", function(){
+    if(this.checked) map.addLayer(ateCluster);
+    else map.removeLayer(ateCluster);
 });
 
 // =======================
