@@ -14,43 +14,43 @@
 <style>
 
 body {
-margin:0;
-font-family:Segoe UI, Arial;
+    margin:0;
+    font-family:Segoe UI, Arial;
 }
 
 #map {
-height:100vh;
+    height:100vh;
 }
 
 .header {
-position:absolute;
-top:15px;
-left:60px;
-z-index:1000;
-background:white;
-padding:12px 18px;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
-font-size:20px;
-font-weight:bold;
+    position:absolute;
+    top:15px;
+    left:60px;
+    z-index:1000;
+    background:white;
+    padding:12px 18px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    font-size:20px;
+    font-weight:bold;
 }
 
 .filter {
-position:absolute;
-top:80px;
-left:60px;
-z-index:1000;
-background:white;
-padding:10px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    position:absolute;
+    top:80px;
+    left:60px;
+    z-index:1000;
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
 .legend {
-background:white;
-padding:10px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -77,20 +77,19 @@ Académie de Nice — Aires éducatives
 var map = L.map('map').setView([43.8, 6.3], 8);
 
 var relief = L.tileLayer(
-'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-{ attribution: '© OpenTopoMap' }
+    'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+    { attribution: '© OpenTopoMap' }
 ).addTo(map);
 
 var satellite = L.tileLayer(
-'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-{ attribution: '© Esri' }
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    { attribution: '© Esri' }
 );
 
 L.control.layers({
-"Relief": relief,
-"Satellite": satellite
+    "Relief": relief,
+    "Satellite": satellite
 }).addTo(map);
-
 
 // =======================
 // CLUSTERS
@@ -98,7 +97,6 @@ L.control.layers({
 
 var ameCluster = L.markerClusterGroup();
 var ateCluster = L.markerClusterGroup();
-
 
 // =======================
 // LECTURE CSV
@@ -108,79 +106,54 @@ fetch("donnees.csv")
 .then(response => response.text())
 .then(function(text){
 
-var lignes = text.split("\n");
+    var lignes = text.split("\n");
 
-for(var i=1; i<lignes.length; i++){
+    for(var i=1; i<lignes.length; i++){
+        if(!lignes[i]) continue;
 
-if(!lignes[i]) continue;
+        var cols = lignes[i].split(";");
 
-// IMPORTANT : séparateur ;
-var cols = lignes[i].split(";");
+        if(cols.length < 9) continue;
 
-if(cols.length < 9) continue;
+        var nom = cols[0];
+        var adresse = cols[1];
+        var cp = cols[2];
+        var commune = cols[3];
+        var ame = cols[4];
+        var ate = cols[5];
+        var site = cols[6];
+        var lon = parseFloat(cols[7].replace(",", "."));
+        var lat = parseFloat(cols[8].replace(",", "."));
 
-var nom = cols[0];
-var adresse = cols[1];
-var cp = cols[2];
-var commune = cols[3];
+        if(isNaN(lat) || isNaN(lon)) continue;
 
-var lat = parseFloat(cols[4].replace(",", "."));
-var lon = parseFloat(cols[5].replace(",", "."));
+        var popup =
+            "<b>"+nom+"</b><br>"+
+            adresse+"<br>"+
+            cp+" "+commune+"<br>"+
+            (site ? "<a href='"+site+"' target='_blank'>Site web</a>" : "");
 
-var ame = cols[6];
-var ate = cols[7];
+        if(ame == "1"){
+            var marker = L.circleMarker([lat, lon], {
+                radius:8, fillColor:"#007bff", color:"white", weight:1, fillOpacity:0.9
+            });
+            marker.bindPopup(popup);
+            ameCluster.addLayer(marker);
+        }
 
-var site = cols[8];
+        if(ate == "1"){
+            var marker = L.circleMarker([lat, lon], {
+                radius:8, fillColor:"#28a745", color:"white", weight:1, fillOpacity:0.9
+            });
+            marker.bindPopup(popup);
+            ateCluster.addLayer(marker);
+        }
+    }
 
-if(isNaN(lat) || isNaN(lon)) continue;
-
-var popup =
-"<b>"+nom+"</b><br>"+
-adresse+"<br>"+
-cp+" "+commune+"<br>"+
-(site ? "<a href='"+site+"' target='_blank'>Site web</a>" : "");
-
-if(ame == "1"){
-
-var marker = L.circleMarker(
-[lat, lon],
-{
-radius:8,
-fillColor:"#007bff",
-color:"white",
-weight:1,
-fillOpacity:0.9
-});
-
-marker.bindPopup(popup);
-ameCluster.addLayer(marker);
-
-}
-
-if(ate == "1"){
-
-var marker = L.circleMarker(
-[lat, lon],
-{
-radius:8,
-fillColor:"#28a745",
-color:"white",
-weight:1,
-fillOpacity:0.9
-});
-
-marker.bindPopup(popup);
-ateCluster.addLayer(marker);
-
-}
-
-}
-
-map.addLayer(ameCluster);
-map.addLayer(ateCluster);
+    map.addLayer(ameCluster);
+    map.addLayer(ateCluster);
 
 });
-
 
 // =======================
 // LEGENDE
@@ -189,16 +162,12 @@ map.addLayer(ateCluster);
 var legend = L.control({position:"bottomright"});
 
 legend.onAdd = function(){
-
-var div = L.DomUtil.create("div","legend");
-
-div.innerHTML =
-"<b>Légende</b><br>"+
-"<span style='color:#007bff;'>●</span> AME<br>"+
-"<span style='color:#28a745;'>●</span> ATE";
-
-return div;
-
+    var div = L.DomUtil.create("div","legend");
+    div.innerHTML =
+        "<b>Légende</b><br>"+
+        "<span style='color:#007bff;'>●</span> AME<br>"+
+        "<span style='color:#28a745;'>●</span> ATE";
+    return div;
 };
 
 legend.addTo(map);
