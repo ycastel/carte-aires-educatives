@@ -95,8 +95,8 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
         var ame = cols[4];
         var ate = cols[5];
         var site = cols[6];
-        var lon = parseFloat(cols[7].replace(",", "."));
-        var lat = parseFloat(cols[8].replace(",", "."));
+        var lat = parseFloat(cols[7].replace(",", ".")); // ✅ garder comme dans ton CSV
+        var lon = parseFloat(cols[8].replace(",", "."));
 
         if(isNaN(lat) || isNaN(lon)) continue;
 
