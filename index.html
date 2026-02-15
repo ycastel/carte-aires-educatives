@@ -35,7 +35,6 @@ body { margin:0; font-family:Segoe UI, Arial; }
 <body>
 <div class="header">Académie de Nice — Aires éducatives</div>
 
-<!-- Filtres -->
 <div class="filter">
     <label><input type="checkbox" id="ameCheckbox" checked> AME</label><br>
     <label><input type="checkbox" id="ateCheckbox" checked> ATE</label>
@@ -61,7 +60,7 @@ var relief = L.tileLayer(
 var satellite = L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     { attribution: '© Esri' }
-).addTo(map); // <-- Satellite par défaut
+).addTo(map); // Satellite par défaut
 
 L.control.layers({
     "Relief": relief,
@@ -95,8 +94,8 @@ fetch("https://ycastel.github.io/carte-aires-educatives/donnees.csv")
         var ame = cols[4];
         var ate = cols[5];
         var site = cols[6];
-        var lat = parseFloat(cols[7].replace(",", ".")); // ✅ garder comme dans ton CSV
-        var lon = parseFloat(cols[8].replace(",", "."));
+        var lat = parseFloat(cols[8].replace(",", ".")); // ✅ LAT correct
+        var lon = parseFloat(cols[7].replace(",", "."));
 
         if(isNaN(lat) || isNaN(lon)) continue;
 
