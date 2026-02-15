@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
 <meta charset="utf-8"/>
 <title>Aires éducatives — Académie de Nice</title>
 
@@ -12,16 +11,13 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
 
 <style>
-
 body {
     margin:0;
     font-family:Segoe UI, Arial;
 }
-
 #map {
     height:100vh;
 }
-
 .header {
     position:absolute;
     top:15px;
@@ -34,46 +30,26 @@ body {
     font-size:20px;
     font-weight:bold;
 }
-
-.filter {
-    position:absolute;
-    top:80px;
-    left:60px;
-    z-index:1000;
-    background:white;
-    padding:10px;
-    border-radius:10px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.3);
-}
-
 .legend {
     background:white;
     padding:10px;
     border-radius:10px;
     box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
-
 </style>
-
 </head>
 
 <body>
-
-<div class="header">
-Académie de Nice — Aires éducatives
-</div>
-
+<div class="header">Académie de Nice — Aires éducatives</div>
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
 <script>
-
 // =======================
 // INITIALISATION CARTE
 // =======================
-
 var map = L.map('map').setView([43.8, 6.3], 8);
 
 var relief = L.tileLayer(
@@ -94,26 +70,27 @@ L.control.layers({
 // =======================
 // CLUSTERS
 // =======================
-
 var ameCluster = L.markerClusterGroup();
 var ateCluster = L.markerClusterGroup();
 
 // =======================
 // LECTURE CSV
 // =======================
-
 fetch("donnees.csv")
 .then(response => response.text())
 .then(function(text){
 
     var lignes = text.split("\n");
+    console.log("Nombre de lignes CSV:", lignes.length);
 
     for(var i=1; i<lignes.length; i++){
         if(!lignes[i]) continue;
 
         var cols = lignes[i].split(";");
-
-        if(cols.length < 9) continue;
+        if(cols.length < 9) {
+            console.warn("Ligne ignorée, colonnes insuffisantes:", lignes[i]);
+            continue;
+        }
 
         var nom = cols[0];
         var adresse = cols[1];
@@ -125,7 +102,10 @@ fetch("donnees.csv")
         var lon = parseFloat(cols[7].replace(",", "."));
         var lat = parseFloat(cols[8].replace(",", "."));
 
-        if(isNaN(lat) || isNaN(lon)) continue;
+        if(isNaN(lat) || isNaN(lon)) {
+            console.warn("Coordonnées invalides:", lat, lon, lignes[i]);
+            continue;
+        }
 
         var popup =
             "<b>"+nom+"</b><br>"+
@@ -133,34 +113,33 @@ fetch("donnees.csv")
             cp+" "+commune+"<br>"+
             (site ? "<a href='"+site+"' target='_blank'>Site web</a>" : "");
 
-        if(ame == "1"){
+        if(ame === "1"){
             var marker = L.circleMarker([lat, lon], {
                 radius:8, fillColor:"#007bff", color:"white", weight:1, fillOpacity:0.9
             });
             marker.bindPopup(popup);
             ameCluster.addLayer(marker);
+            console.log("Marker AME ajouté:", nom);
         }
 
-        if(ate == "1"){
+        if(ate === "1"){
             var marker = L.circleMarker([lat, lon], {
                 radius:8, fillColor:"#28a745", color:"white", weight:1, fillOpacity:0.9
             });
             marker.bindPopup(popup);
             ateCluster.addLayer(marker);
+            console.log("Marker ATE ajouté:", nom);
         }
     }
 
     map.addLayer(ameCluster);
     map.addLayer(ateCluster);
-
 });
 
 // =======================
 // LEGENDE
 // =======================
-
 var legend = L.control({position:"bottomright"});
-
 legend.onAdd = function(){
     var div = L.DomUtil.create("div","legend");
     div.innerHTML =
@@ -169,10 +148,8 @@ legend.onAdd = function(){
         "<span style='color:#28a745;'>●</span> ATE";
     return div;
 };
-
 legend.addTo(map);
 
 </script>
-
 </body>
 </html>
